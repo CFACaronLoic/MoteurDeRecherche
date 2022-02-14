@@ -1,0 +1,8 @@
+
+.col-md-10 {
+    justify-content: center;
+}
+
+hr.solid {
+    border-top: 3px solid black;
+  }
