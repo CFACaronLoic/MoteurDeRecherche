@@ -11,6 +11,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { PopularComponent } from './components/popular/popular.component';
 import { CircleImageComponent } from './components/circle-image/circle-image.component';
+import { NewComponent } from './components/new/new.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { CircleImageComponent } from './components/circle-image/circle-image.com
     HeaderComponent,
     SidenavComponent,
     PopularComponent,
-    CircleImageComponent
+    CircleImageComponent,
+    NewComponent
   ],
   imports: [
     BrowserModule,

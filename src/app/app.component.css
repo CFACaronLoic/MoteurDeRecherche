@@ -1,8 +1,11 @@
-
-.col-md-10 {
-    justify-content: center;
+#popular {
+    width: 100%;
 }
 
-hr.solid {
-    border-top: 3px solid black;
-  }
+#new {
+    width: 100%;
+}
+
+.row {
+    margin-right: 0px;
+}

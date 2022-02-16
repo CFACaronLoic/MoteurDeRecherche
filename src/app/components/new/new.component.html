@@ -1,0 +1,15 @@
+    <div class="row">
+        <h2>Récents</h2>
+      </div>
+<table>
+    <th>Title</th>
+    <th>Author</th>
+    <th>Subject</th>
+    <th>Category</th>
+    <tr *ngFor="let book of books">
+        <td> {{book.name}} </td>
+        <td> {{book.author}} </td>
+        <td> {{book.subject}} </td>
+        <td> {{book.category}} </td>
+    </tr>
+</table>

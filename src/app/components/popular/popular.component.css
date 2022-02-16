@@ -2,3 +2,11 @@
     margin-left: 2,5px;
     margin-right: 2,5px;
 }
+
+#image {
+    justify-content: center;
+}
+
+.row {
+    margin-right: 0px;
+}

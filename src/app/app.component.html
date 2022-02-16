@@ -1,12 +1,14 @@
 <app-header></app-header>
-  <div class="row">
-    <div class="col-md-2">
-      <app-sidenav></app-sidenav>
+<div class="row">
+  <div class="col-md-2 g-0">
+    <app-sidenav></app-sidenav>
+  </div>
+  <div class="col-md-10 g-0">
+    <div class="row">
+        <app-popular id="popular"></app-popular>
     </div>
-    <div class="col-md-10 d-flex justify-content-center">
-      <div class="container">
-      <app-popular></app-popular>
-      </div>
-      <hr class="solid">
+    <div class="row">
+        <app-new id="new"></app-new>
     </div>
   </div>
+</div>
