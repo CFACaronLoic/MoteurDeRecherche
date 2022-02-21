@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient,HttpErrorResponse, HttpResponse } from '@angular/common/http';
+import { HttpClient,HttpErrorResponse, HttpResponse, HttpHeaders } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { catchError, retry } from 'rxjs/operators';
 import { Book } from '../interfaces/book';
@@ -14,10 +14,10 @@ export class BookService {
   }
   
   Test(): void {
-      this.http.get<any>(this.local+'/booksearch')
+      const headers = new HttpHeaders().set('Content-Type', 'text/plain; charset=utf-8');
+      this.http.get<any>(this.local+'/booksearch',{ headers, responseType: 'text' as 'json'})
       .subscribe((data:any) => {
-        console.log(data);
+    window.alert(data);
     });
   }
-
 }
