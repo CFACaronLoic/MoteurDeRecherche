@@ -16,6 +16,8 @@ import { BookService } from './services/book.service';
 import { BookpageComponent } from './components/bookpage/bookpage.component';
 import { SearchComponent } from './components/search/search.component';
 import { HomeComponent } from './components/home/home.component';
+import { BooksearchComponent } from './components/booksearch/booksearch.component';
+import { BookresultComponent } from './components/bookresult/bookresult.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { HomeComponent } from './components/home/home.component';
     NewComponent,
     BookpageComponent,
     SearchComponent,
-    HomeComponent
+    HomeComponent,
+    BooksearchComponent,
+    BookresultComponent
   ],
   imports: [
     BrowserModule,

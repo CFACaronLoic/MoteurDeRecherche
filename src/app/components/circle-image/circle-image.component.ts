@@ -8,14 +8,6 @@ import { Book } from 'src/app/interfaces/book';
 })
 export class CircleImageComponent implements OnInit {
 
-  book : Book = {
-    id : 1,
-    name : 'Le livre de Loic',
-    author : 'Thibault',
-    subject : 'Politique',
-    category : 'Educatif'
-  };
-
   constructor() { }
 
   ngOnInit(): void {

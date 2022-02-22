@@ -9,15 +9,24 @@ import { Book } from '../interfaces/book';
 })
 export class BookService {
 
+  books:any;
+
   local = 'http://localhost:8080';  
   constructor(private http: HttpClient) {
   }
   
-  Test(): void {
-      const headers = new HttpHeaders().set('Content-Type', 'text/plain; charset=utf-8');
-      this.http.get<any>(this.local+'/booksearch',{ headers, responseType: 'text' as 'json'})
-      .subscribe((data:any) => {
-    window.alert(data);
-    });
+  getBooks(){
+    return this.books;
   }
-}
+
+  Test() {
+      //const headers = new HttpHeaders()//.set('Content-Type', 'text/plain; charset=utf-8').set("accept","*/*");
+      /*this.http.get<any>(this.local+'/bookall')
+      .subscribe((data:any) => {
+    console.log(data);
+    });*/
+    //this.http.get(this.local+'/booksearch');
+    return this.http.get(this.local+'/booksearch');
+    }
+  }
+

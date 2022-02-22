@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from 'src/app/services/data.service';
 
 @Component({
   selector: 'app-bookpage',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BookpageComponent implements OnInit {
 
-  constructor() { }
+  constructor(private dataservice : DataService) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this.dataservice.getBookdata.subscribe((data) => {
+        console.log("got book");
+    })
   }
 
 }
