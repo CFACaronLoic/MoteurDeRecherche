@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { BookObject } from 'src/app/interfaces/object';
 import { BookService } from 'src/app/services/book.service';
 import { DataService } from 'src/app/services/data.service';
 
@@ -15,15 +14,10 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onClick(): void {
-    //this.dataservice.GetBook(this.bookservice.getBooks());
-    this.bookservice.Test().subscribe((data:any) => {
-      this.dataservice.GetBook(data);
+  onClick(value:string): void {
+    this.bookservice.GetSearchResult(value).subscribe((data:any) => {
+      this.dataservice.GetBookList(data);
     });
-  }
-
-  data() {
-   
   }
 
 }

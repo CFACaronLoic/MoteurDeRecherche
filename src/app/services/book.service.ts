@@ -19,14 +19,19 @@ export class BookService {
     return this.books;
   }
 
-  Test() {
-      //const headers = new HttpHeaders()//.set('Content-Type', 'text/plain; charset=utf-8').set("accept","*/*");
-      /*this.http.get<any>(this.local+'/bookall')
-      .subscribe((data:any) => {
-    console.log(data);
-    });*/
-    //this.http.get(this.local+'/booksearch');
-    return this.http.get(this.local+'/booksearch');
+  GetSearchResult(value:string) {
+    return this.http.get(this.local+`/booksearch/${value}`);
+    }
+
+  GetAdvancedSearchResult(value:string,value2:string,regex:boolean) {
+    if(regex==false){
+      return this.http.get(this.local+`/bookfieldsearch/${value}/${value2}`);
+    }else
+      return this.http.get(this.local+`/bookregexpsearch/${value}/${value2}`);
+    }
+
+  GetTop(){
+    return this.http.get(this.local+"/bookall/10");
     }
   }
 

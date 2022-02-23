@@ -3,7 +3,6 @@ export interface Book {
     bookshelves: string[];
     copyright: boolean;
     download_count: number;
-    formats: Object;
     id: number;
     languages: string[]
     media_type: string;

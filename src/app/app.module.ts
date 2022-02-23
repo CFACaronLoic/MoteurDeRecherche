@@ -11,12 +11,11 @@ import { MatButtonModule } from '@angular/material/button';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { PopularComponent } from './components/popular/popular.component';
 import { CircleImageComponent } from './components/circle-image/circle-image.component';
-import { NewComponent } from './components/new/new.component';
+import { TopComponent } from './components/top/top.component';
 import { BookService } from './services/book.service';
 import { BookpageComponent } from './components/bookpage/bookpage.component';
 import { SearchComponent } from './components/search/search.component';
 import { HomeComponent } from './components/home/home.component';
-import { BooksearchComponent } from './components/booksearch/booksearch.component';
 import { BookresultComponent } from './components/bookresult/bookresult.component';
 
 @NgModule({
@@ -25,11 +24,10 @@ import { BookresultComponent } from './components/bookresult/bookresult.componen
     HeaderComponent,
     PopularComponent,
     CircleImageComponent,
-    NewComponent,
+    TopComponent,
     BookpageComponent,
     SearchComponent,
     HomeComponent,
-    BooksearchComponent,
     BookresultComponent
   ],
   imports: [

@@ -36,6 +36,16 @@
     font-size: 17px;
     border-radius: 10px;
   }
+
+  .topnav button[type=button] {
+    float: right;
+    display: block;
+    margin-top: 5px;
+    margin-right: 10px;
+    color:white;
+    border-color: white;
+    background-color:transparent;
+  }
   
   /* When the screen is less than 600px wide, stack the links and the search field vertically instead of horizontally */
   @media screen and (max-width: 600px) {
@@ -47,6 +57,15 @@
       margin: 0;
       padding: 14px;
     }
+    
+    .topnav button[type=button] {
+      float: right;
+      display: block;
+      width: 100%;
+      margin: 0;
+      padding: 14px;
+    }
+
     .topnav input[type=text] {
       border: 1px solid #ccc;
     }

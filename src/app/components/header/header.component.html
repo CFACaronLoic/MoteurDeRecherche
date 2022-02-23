@@ -1,8 +1,6 @@
 <div class="topnav sticky-top">
   <a class="active" routerLink="/home">Home</a>
-  <a routerLink="/category">Category</a>
-  <a routerLink="/book" (click)="data()">Data test</a>
-  <a routerLink="/bookresult" (click)="onClick()">Test connection</a>
   <a routerLink="/search">Advanced search</a>
-  <input type="text" placeholder="Search..">
-</div> 
+  <button class="btn bg-transparent btn-outline-primary" routerLink="/bookresult" type="button" (click)="onClick(searchvalue.value)">Search</button>
+  <input #searchvalue type="text" placeholder="Search..">
+</div>

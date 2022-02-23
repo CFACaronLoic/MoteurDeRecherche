@@ -1,21 +1,23 @@
 import { Component, OnInit } from '@angular/core';
+import { BookService } from 'src/app/services/book.service';
+import { DataService } from 'src/app/services/data.service';
 import { Book } from 'src/app/interfaces/book';
 import { Bookpage } from 'src/app/interfaces/bookpage';
-import { DataService } from 'src/app/services/data.service';
 
 @Component({
-  selector: 'app-bookresult',
-  templateUrl: './bookresult.component.html',
-  styleUrls: ['./bookresult.component.css']
+  selector: 'app-top',
+  templateUrl: './top.component.html',
+  styleUrls: ['./top.component.css']
 })
-export class BookresultComponent implements OnInit {
+export class TopComponent implements OnInit {
 
   bookList : Array<Book> = [];
 
-  constructor(private dataservice:DataService) { }
+  constructor(private bookservice:BookService, private dataservice:DataService) { }
 
-  ngOnInit() {
-    this.dataservice.getBookdata.subscribe((data) => {
+  ngOnInit(): void {
+    this.bookservice.GetTop().subscribe((data:any) => {
+      this.dataservice.GetBookList(data);
       for(var i = 0; i < data.hits.hits.length;i++){
         let book = {} as Book;
         book.id = data.hits.hits[i]._source.id;
@@ -25,7 +27,7 @@ export class BookresultComponent implements OnInit {
         book.subjects = data.hits.hits[i]._source.subjects;
         this.bookList.push(book);
       }
-  });
+    });
   }
 
   SendData(title:string,authors:string,categories:string[],subjects:string[]) {
@@ -36,4 +38,5 @@ export class BookresultComponent implements OnInit {
     bookpage.title = title;
     this.dataservice.GetBook(bookpage);
   }
+
 }

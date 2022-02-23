@@ -1,12 +1,11 @@
 <div class="flex-container">
-    <div class="card">
-        <img class="card-img-top" src="..." alt="Card image cap">
+    <div class="card">  
         <div class="card-body">
-        <h5 class="card-title">Card title</h5>
+        <h2 class="card-title"> {{Book.title}} </h2>
             <ul class="list-group list-group-flush">
-            <li class="list-group-item">Cras justo odio</li>
-            <li class="list-group-item">Dapibus ac facilisis in</li>
-            <li class="list-group-item">Vestibulum at eros</li>
+            <li class="list-group-item">{{Book.author}}</li>
+            <li class="list-group-item"> {{Book.categories}} </li>
+            <li class="list-group-item"> {{Book.subjects}} </li>
             </ul>
         <a href="#" class="btn btn-primary">Go somewhere</a>
         </div>

@@ -1,0 +1,23 @@
+<div class="row">
+    <h2>Top 10</h2>
+</div>
+<table>
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Title</th>
+            <th scope="col">Author</th>
+            <th scope="col">Subject</th>
+            <th scope="col">Category</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let book of bookList; index as i">
+            <td> {{ i+1 }} </td>
+            <td  routerLink="/book" (click)="SendData(book.title,book.authors,book.bookshelves,book.subjects)">{{ book.title }} </td>
+            <td> {{ book.authors }} </td>
+            <td> {{ book.subjects }} </td>
+            <td> {{ book.bookshelves }} </td>
+        </tr>
+    </tbody>
+</table>
